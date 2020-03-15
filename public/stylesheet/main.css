@@ -1,0 +1,85 @@
+body{
+    font-family: 'Cookie';
+}
+.top6{
+   font-family: 'Acme';
+}
+.navbar{
+   font-family: 'Viaoda Libre';
+   font-weight: 900;
+   margin-bottom: 0;
+}
+
+.btn {
+   margin-top: 10px;
+   font-size: 0.6em;
+}
+
+.container2{
+   width: 90%;
+   margin: auto;
+}
+
+.caption{
+ font-size: 2em;
+}
+
+#img1{
+   padding: 0;
+   width: 100%;
+}
+
+.notesoi{
+   position: absolute;
+   top: 35%;
+   left: 40%;
+   font-family: 'Permanent Marker';
+   line-height: 0.9;
+   font-size: 8em;
+   color: #088224e3;
+   text-shadow: 0 2px 5px #8fe68f, 0 5px 20px #f3d98ca1;
+
+}
+
+.btn-outline-primary{
+   color: rgb(45, 121, 209);
+   background: none;
+   border-radius: 3px;
+   border-color: rgb(45, 121, 209);
+   border-style: solid;
+   border-width: 0.8px;
+   transition: color 0.2s,background 0.2s;
+}
+
+.btn-outline-primary:hover{
+   background: rgb(45, 121, 209);
+   color: white;
+}
+
+.formcontainer{
+   width: 100%;
+   font-size: 3em;
+   padding: 15px;
+   padding-bottom: 0;
+   color: #72800099;
+}
+
+.notes-main{
+   margin: 2% 0;
+   padding: 0;
+   text-align: center;
+}
+
+.notes-main-container{
+   margin: 0 auto;
+   width: 94%;
+}
+
+.notes-main hr{
+   width: 94%;
+   box-shadow: 0 1px 2px  rgba(155, 153, 153, 0.685),0 5px 20px rgba(128, 128, 128, 0.685);
+}
+
+#signupbox{
+   margin: 0;
+}

@@ -1,0 +1,29 @@
+<%- include('./partials/header') %>
+ <div>
+    <div class="row" id="signupbox">
+        <div class= "col-md-8" style="position: relative; padding: 0;">
+            <img src="img1.jpg" alt="Photo by Meelika Marzzarella on Unsplash"  id="img1">
+            <div class="notesoi">Notes<br>App
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-top: 3%;">
+            <div class="container formcontainer">
+                <div class="form-group">
+                    <form action="/login" method="POST">
+                        <div class="caption" style="text-align: center;">
+                            Log In
+                        </div>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <button class="btn btn-outline-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+<%- include('./partials/footer') %>
