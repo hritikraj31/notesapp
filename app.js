@@ -27,7 +27,19 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect('mongodb://localhost/notesapp',{useUnifiedTopology: true,useNewUrlParser:true , useFindAndModify: false});
+// mongoose.connect('mongodb://localhost/notesapp',{useUnifiedTopology: true,useNewUrlParser:true , useFindAndModify: false});
+process.env.DATABASEURL = process.env.DATABASEURL ||'mongodb://localhost/notesapp';
+// mongoose.connect( process.env.DATABASEURL ,{useUnifiedTopology: true,useNewUrlParser:true,useFindAndModify: false});
+mongoose.connect(process.env.DATABASEURL, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }).then(res=>{
+          console.log("DB Connected!")
+  }).catch(err => {
+    console.log(err.message);
+  });
 
 app.use(express.static(__dirname+'/public'));
 app.use(express.static(__dirname+'/assets'));
