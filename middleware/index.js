@@ -16,6 +16,13 @@ middleWareObj.isLoggedIn  = function(req,res,next){
     res.redirect('/login');
 };
 
-
+middleWareObj.isEmptyNote = function(req,res,next){
+    if(!(!req.body.note.text || req.body.note.text.length <=0)){
+        next();
+    }else{
+        console.log('The body is empty..');
+        res.redirect('/');
+    }
+}
 
 module.exports = middleWareObj;

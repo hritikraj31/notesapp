@@ -27,7 +27,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect('mongodb://localhost/notesapp',{useUnifiedTopology: true,useNewUrlParser:true , useFindAndModify: true});
+mongoose.connect('mongodb://localhost/notesapp',{useUnifiedTopology: true,useNewUrlParser:true , useFindAndModify: false});
 
 app.use(express.static(__dirname+'/public'));
 app.use(express.static(__dirname+'/assets'));
@@ -40,7 +40,7 @@ app.use(function(req,res,next){
     next();
 });
 app.use(indexRoute);
-app.use(notes);
+app.use('/notes',notes);
 
 
 process.env.PORT = process.env.PORT || 3000;

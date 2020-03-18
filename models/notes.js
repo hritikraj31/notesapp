@@ -6,7 +6,8 @@ var notesSchema = mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         ref  : 'Users'
     },
-    text : String
+    text : String,
+    description: String
 });
 
 

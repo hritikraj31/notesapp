@@ -1,20 +1,36 @@
 <%- include('../partials/header')  %>
 
 <div class="notes-main">
-    <h1>
+    <h1 style="font-weight: 700; font-size: 5em;">
         Notes App
     </h1>
-    <h3>
+    <h3 style="font-size: 3em;">
         Make your notes here easily.
     </h3>
+    <a href="/notes/new" class="btn btn-primary" style="width: 100px;font-family: Acme;font-size: 1.2em;"><i class="fa fa-plus" style='padding-right: 5px'></i>Compose</a>
     <hr>
 </div>
 <div class="notes-main-container">
-    <div class="row">
-        <div class="col-md-6">
-            
+    <div class="row"></div>
+    <% if(notelists){ %>
+    <% notelists.forEach(function(note){ %> 
+    
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <span class="th1"><%= note.description %></span>
+                <hr style="margin: 0;">
+                <a href="/notes/<%= note.id %>" class="btn btn-primary">View</a>
+                <a href="/notes/<%= note.id %>/edit" class="btn btn-warning">Edit</a>
+                <form action="/notes/<%= note.id %>?_method=DELETE" method="POST" style='display: inline;'>
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
         </div>
+    <% });} %>
     </div>
 </div>
 
+<script>
+document.onload = function(){document.getElementsByClassName('th1')[0].style.wordwrap = "break-word"};
+</script>
 <%- include('../partials/footer')  %>

@@ -1,6 +1,8 @@
-<!-- <!DOCTYPE > -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             NotesApp
         </title>
@@ -8,23 +10,30 @@
         <link href="https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheet/main.css">
+        <link rel="stylesheet" href="/stylesheet/editorstyle.css">
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed" style = "z-index: 1000;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="/" class="navbar-brand">NotesApp</a>
+                <button type="button" data-target="#nav1" data-toggle="collapse" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 </div>
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse" id="nav1">
                     <ul class="nav navbar-nav navbar-right">
                         <% if(!currentUser){%>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="/register">Sign Up</a></li>
+                            <li><a href="/login"><i class="fa fa-sign-in" style="margin-right: 10px;"></i>Login</a></li>
+                            <li><a href="/register"><i class="fa fa-user-plus" style="margin-right: 10px;"></i>Sign Up</a></li>
                          <% } else { %>
-                            <li><a href="#"><%= currentUser.username %></a></li>
-                            <li><a href="/logout">Logout</a></li>
+                            <li><a href="#"><i class="fa fa-user" style="margin-right: 10px;"></i><%= currentUser.username %></a></li>
+                            <li><a href="/logout"><i class="fa fa-sign-out" style="margin-right: 10px;"></i>Logout</a></li>
                         <% } %>
                     </ul>
                 </div>

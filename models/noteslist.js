@@ -2,15 +2,15 @@ var mongoose = require('mongoose');
 
 var notesLists = mongoose.Schema({
     author: {
-        id: {
             type : mongoose.Schema.Types.ObjectId,
             ref: 'Users'
-        },
-        username: String
     },
     list : [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref : 'notes'
+        id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref : 'notes'
+            },
+        description: String
     }]
 });
 
