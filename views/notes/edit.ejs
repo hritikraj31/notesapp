@@ -43,11 +43,11 @@
                 <option value="H6">H6</option>
             </select>
             <button onclick="execCmd('insertHorizontalRule')">HR</button>
-            <button onclick="execCmd('createLink',prompt('Enter a URL.. ','http://'))"><i class="fa fa-link"></i></button>
-            <button onclick="execCmd('unlink')"><i class="fa fa-unlink"></i></button>
+            <!-- <button onclick="execCmd('createLink',prompt('Enter a URL.. ','http://'))"><i class="fa fa-link"></i></button> -->
+            <!-- <button onclick="execCmd('unlink')"><i class="fa fa-unlink"></i></button> -->
             <button onclick="toggleSource()"><i class="fa fa-code"></i></button>
             <button onclick="toggleEdit()"><i class="fa fa-edit"></i></button>
-            <select onchange="execCommandWithArg('fontName',this.value)">
+            <!-- <select onchange="execCommandWithArg('fontName',this.value)">
                 <option value="Arial">Arial</option>
                 <option value="Conic Sans MS">Conic Sans MS</option>
                 <option value="Courier">Courier</option>
@@ -55,7 +55,7 @@
                 <option value="Tahoma">Tahoma</option>
                 <option value="Times New Roman">Times New Roman</option>
                 <option value="Verdana">Verdana</option>
-            </select>
+            </select> -->
             <select onchange="execCommandWithArg('fontSize',this.value)">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -67,7 +67,7 @@
             </select>
             Foreground : <input type="color" value="#23ffff" onchange="execCommandWithArg('foreColor',this.value)">
             Background : <input type="color" value="#23ffff" onchange="execCommandWithArg('hiliteColor',this.value)">
-            <button onclick="execCmd('insertImage',prompt('Enter the image URL.. ',''))"><i class="fa fa-file-image-o"></i></button>
+            <!-- <button onclick="execCmd('insertImage',prompt('Enter the image URL.. ',''))"><i class="fa fa-file-image-o"></i></button> -->
             <button onclick="execCmd('selectAll')">Sellect All</button>
             </div>
             <button id="openBtn" onclick="toggleNav()">More</button>
