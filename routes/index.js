@@ -5,6 +5,9 @@ var express         = require('express'),
 
 router.get('/',function(req,res){
     // res.send('soon here will be landing page');
+    if(req.user)
+    res.redirect('/notes');
+    else
     res.render('landing');
 });
 
@@ -20,7 +23,7 @@ router.post('/register',function(req,res){
         if(err){
             req.flash("error", err.message);
             console.log(err);
-            return res.render("register");
+            return res.redirect("/register");
         }
         passport.authenticate('local')(req,res,function(){
             req.flash("success", "Welcome to Notes App "+ user.username);
