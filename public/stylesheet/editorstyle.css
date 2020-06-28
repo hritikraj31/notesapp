@@ -1,64 +1,63 @@
-.econtainer{
-    width: 901.192px;
-    margin: auto;
-    margin-top: 25px;
+.econtainer {
+	width: 901.192px;
+	margin: auto;
+	margin-top: 25px;
 }
 
-
-@media screen and (max-width: 968px){
-    .econtainer{
-        width: 95%;
-    }
+@media screen and (max-width: 968px) {
+	.econtainer {
+		width: 95%;
+	}
 }
 
-@media screen and (min-width: 891px){
-    #openBtn{
-        display: none;
-    }
+@media screen and (min-width: 891px) {
+	#openBtn {
+		display: none;
+	}
 }
 
-
-.e1{
-    width: 100%;
-    height: 525px; 
-    margin: auto; 
-    display: block;
-    border: 1px rgb(156, 156, 168) solid;
+.e1 {
+	width: 100%;
+	height: 525px;
+	margin: auto;
+	display: block;
+	border: 1px rgb(156, 156, 168) solid;
 }
 
-.e1 button, .e1 input, .e1 select{
-    display: inline-block;
-    margin-top: 3px;
-    margin-left: 3px;
-
+.e1 button,
+.e1 input,
+.e1 select {
+	display: inline-block;
+	margin-top: 3px;
+	margin-left: 3px;
 }
 
-.eform{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
+.eform {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
 }
 
-.eg{
-    display: inline;
-    margin-right: 25px;
+.eg {
+	display: inline;
+	margin-right: 25px;
 }
 
-#ei1{
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    padding: 5px;
-    border: 0;
-    width: 92%;
+#ei1 {
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	padding: 5px;
+	border: 0;
+	width: 92%;
 }
 
-#eb1{
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    padding: 2px;
-    border: 1;
-    width: 7%;
-    min-width: 50px;
+#eb1 {
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	padding: 2px;
+	border: 1;
+	width: 7%;
+	min-width: 50px;
 }
