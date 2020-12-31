@@ -21,3 +21,6 @@ Hosted app at https://obscure-headland-31583.herokuapp.com/
 ### Frontend
 
 * Frontend has been completely made using pure HTML, Javascript and CSS. All the tools functions have been implemented using executeCommand function provided by DOM.
+
+---
+<img src="notesapp_project.png" width="1000" height="580" alt="Website Screenshot">
